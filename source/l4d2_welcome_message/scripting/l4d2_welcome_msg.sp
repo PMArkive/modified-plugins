@@ -49,7 +49,7 @@ bool g_bNekoSpecials = false;
 bool g_bIsInReady = false;
 bool g_bIsSIControlAvailable = false;
 
-#define PLUGIN_VERSION "r1.2.1"
+#define PLUGIN_VERSION "r1.2.2"
 
 public Plugin myinfo =
 {
@@ -141,7 +141,7 @@ void Timer_WelcomeMessage(Handle Timer, int client)
 
 	if (g_hCvar_MoreLine.IntValue != 0)
 	{
-		char buffer[128];
+		char buffer[512];
 		for (int i = 1; i < g_hCvar_MoreLine.IntValue; i++)
 		{
 			Format(buffer, sizeof(buffer), "MoreMessage%d", i);
