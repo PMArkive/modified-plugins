@@ -142,7 +142,7 @@ void Timer_WelcomeMessage(Handle Timer, int client)
 	if (g_hCvar_MoreLine.IntValue != 0)
 	{
 		char buffer[512];
-		for (int i = 1; i < g_hCvar_MoreLine.IntValue; i++)
+		for (int i = 1; i <= g_hCvar_MoreLine.IntValue; i++)
 		{
 			Format(buffer, sizeof(buffer), "MoreMessage%d", i);
 			CPrintToChat(client, "%t", buffer);
